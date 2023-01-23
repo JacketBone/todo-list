@@ -4,6 +4,8 @@ import React, {useState} from 'react'
 import data from './data.json'
 import ToDoList from './components/ToDoList'
 import ToDoForm from './components/ToDoForm'
+import SectionOne from './components/SectionOne'
+import SectionTwo from './components/SectionTwo'
 
 function App() {
 const [toDoList, setToDoList] = useState(data);
@@ -34,11 +36,19 @@ const handleFilter = () => {
           <Head />
         </header>  
         <main>
-          <span style={{paddingTop: '10px'}}>
-          <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter} />
+          <span className='section'>
+            <SectionOne />
           </span>
-          <span>
-          <ToDoForm addTask={addTask} id='form'/>
+          <div className='flexColumn'>
+            <span id='toDoList'>
+              <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter} />
+            </span>
+            <span>
+             <ToDoForm addTask={addTask} id='form'/>
+            </span>
+          </div>
+          <span className='section'>
+            <SectionTwo />
           </span>
         </main> 
         <footer style={{display: 'none'}}>hi</footer>
