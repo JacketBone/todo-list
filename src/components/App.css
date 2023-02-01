@@ -34,15 +34,19 @@ main{
 }
 
 .open{
+  display: flex;
   border: 2px solid;
   text-align: center;
   background-color: aqua;
+  justify-content: flex-start;
 }
 
 .strike{
+  display: flex;
   border: 2px solid;
   text-align: center;
   background-color: red;
+  justify-content: flex-end;
 }
 
 .ToDo{

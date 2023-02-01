@@ -1,34 +1,27 @@
 import ToDo from './ToDo'
 import React from 'react'
-import {SortableElement} from 'react-sortable-hoc';
+import { SortableElement } from 'react-sortable-hoc'
 import './App.css'
-
 
 const SortableItem = SortableElement(ToDo);
 
-    const ToDoList = ({items, handleFilter, handleToggle}) =>{
+const ToDoList = ({items, handleToggle, handleFilter}) => {
 
-        return (
-            <div>
-            <div className="todoList">
-                {items.map((x,i)=>{
-                    return <SortableItem 
-                        todo={x}
-                        index={i}
-                        key={x.id}
-                        handleFilter={handleFilter}
-                        handleToggle={handleToggle}
-                    />
-                })}
-            </div>
-            <div>
+    let styleBorder ={
+        borderBottom: '2px solid',
+        backgroundColor: 'lightblue',
+    }
+
+    return (
+        <div className="ToDo">
+            {items.map((todo,i) => {
+                return (
+                    <SortableItem todo={todo} index={i} key={todo.id} handleToggle={handleToggle} style={styleBorder}/>
+                )
+            })}
             <button style={{margin:'20px'}} onClick={handleFilter}>Clear Completed</button>
-            </div>
-            </div>
-        )
-        
-    };
-        
-
+        </div>
+    )
+}
 
 export default ToDoList;
