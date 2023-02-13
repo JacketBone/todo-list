@@ -28,10 +28,27 @@ main{
   flex-direction: column;
 }
 
-.ToDo{
-  text-align: center;
-}
 
 .secPar{
   padding: 5%;
+}
+
+.open{
+  display: flex;
+  border: 2px solid;
+  text-align: center;
+  background-color: aqua;
+  justify-content: flex-start;
+}
+
+.strike{
+  display: flex;
+  border: 2px solid;
+  text-align: center;
+  background-color: red;
+  justify-content: flex-end;
+}
+
+.ToDo{
+  text-align: center;
 }

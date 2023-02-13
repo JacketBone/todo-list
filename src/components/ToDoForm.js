@@ -16,7 +16,7 @@ const handleSubmit = (e) => {
 
 return (
     <form onSubmit={handleSubmit}>
-        <input style={{marginRight:'10px'}} value={userInput} type='text' onChange={handleChange} placeholder="Enter task..."/>
+        <input style={{marginRight:'10px', border: '1px, solid, red'}} value={userInput} type='text' onChange={handleChange} placeholder="Enter task..."/>
         <button>Submit</button>
     </form>
 )
