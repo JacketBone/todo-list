@@ -1,54 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: rgb(39, 177, 177);
-  margin-top: 0;
+  text-align: center;
+  background-color: rgb(12, 12, 12);
   font-family:'Times New Roman', Times, serif;
+  color: white;
 }
 
-main{
+body{
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+  background-color: rgb(12, 12, 12);
+  font-family:'Times New Roman', Times, serif;
+  color: white;
+}
+
+h1{
+  text-align: center;
+}
+
+button{
+  border: none;
+  background-color: azure;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+input{
+  border: none;
+  height: 30px;
+  padding-left: 10px;
+}
+
+input:focus{
+  background-color: azure;
+}
+
+h2{
+  border-bottom: 4px solid gray;
+}
+
+
+#startForm{
   display: flex;
-  flex-flow:row;
-  background-color: aliceblue;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  justify-content: center;
+  column-gap: 5px;
 }
 
-.section{
-  flex-shrink: 2;
-  flex-basis: 33%;
+#welcome{
+  display: flex;
+  flex-flow:column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.toDoRow{
+  display: flex;
+  flex-direction: row; 
+  justify-content:space-around;
+  padding-top: 15px;
 }
 
 .flexColumn{
+  border: 3px solid grey;
+  border-radius: 25px;
+  min-height:68vh;
+  max-height: auto;
+  text-align: center;
+}
+
+.flexColumnGrow{
+  border: 3px solid grey;
+  border-radius: 25px;
+  min-height: 300px;
+  max-height: auto;
+  width: 33%;
+  text-align: center;
+}
+
+#listColumn{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+#simpleColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  min-height: 100%
+}
+
+#addList{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.taskSubmit{
+ border: 1px solid rgb(12, 12, 12);
+ width: 200px;
+}
+
+#selectable{
+  color: black;
+  max-width: 300px;
+}
+
+#doubleColumns{
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  min-height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#taskColumn{
+  display: flex;
   flex-direction: column;
 }
 
 
-.secPar{
-  padding: 5%;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: .5;
 }
 
-.open{
-  display: flex;
-  border: 2px solid;
-  text-align: center;
-  background-color: aqua;
-  justify-content: flex-start;
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
 }
 
-.strike{
+.modal {
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 1.75rem auto;
+  border-radius: 3px;
+  max-width: 500px;
+  height: auto;
+  padding: 1rem;
+}
+
+.modal-header {
   display: flex;
-  border: 2px solid;
-  text-align: center;
-  background-color: red;
   justify-content: flex-end;
 }
 
-.ToDo{
-  text-align: center;
+.modal-close-button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 0;
+  color: #000;
+  opacity: .3;
+  cursor: pointer;
+  border: none;
 }
